@@ -57,8 +57,9 @@
             this.lbl_out.Font = new System.Drawing.Font("Times New Roman", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbl_out.Location = new System.Drawing.Point(425, 19);
             this.lbl_out.Name = "lbl_out";
-            this.lbl_out.Size = new System.Drawing.Size(0, 55);
+            this.lbl_out.Size = new System.Drawing.Size(121, 55);
             this.lbl_out.TabIndex = 2;
+            this.lbl_out.Text = "none";
             // 
             // Form1
             // 

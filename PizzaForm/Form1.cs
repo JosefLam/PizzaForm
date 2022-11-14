@@ -11,36 +11,41 @@ namespace PizzaForm
 
         private void margheritaBTN_Click(object sender, EventArgs e)
         {
-            margheritaCL pizza = new margheritaCL();
-            list = ($"{list} {name}");
-            lbl_out.Text = list;
+            MargheritaCL pizza = new MargheritaCL();
+            lbl_out.Text = ($"{pizza.name} cheese:{pizza.cheese}, tomato:{pizza.tomato}, sausage:{pizza.sausage}");
         }
         private void pepperoniBTN_Click(object sender, EventArgs e)
         {
-            pepperoniCL pizza = new pepperoniCL();
-            list = ($"{list} {name}");
-            lbl_out.Text = list;
+            PepperoniCL pizza = new PepperoniCL();
+            lbl_out.Text = ($"{pizza.name} cheese:{pizza.cheese}, tomato:{pizza.tomato}, sausage:{pizza.sausage}");
         }
 
-        string list;
 
         class pizza
         {
-            private string name;
-            private bool tomato = true;
-            private bool cheese = true;
-            private bool sausage = false;
+            public string name = "testpizza";
+            public bool tomato = true;
+            public bool cheese = true;
+            public bool sausage = false;
         }
 
-        class margheritaCL: pizza
+        class MargheritaCL: pizza
         {
-            name = ("margherita");
+            public MargheritaCL()
+            {
+                name = ("margherita");
+            }
+            
         }
 
-        class pepperoniCL: pizza
+        class PepperoniCL: pizza
         {
-            name = ("pepperoni");
-            sausage = true;
+            public PepperoniCL()
+            {
+                name = ("pepperoni");
+                sausage = true;
+            }
+            
         }
 
         
